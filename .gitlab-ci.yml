@@ -1,0 +1,11 @@
+image: debian:testing
+create-pages:
+  pages:
+    publish: public
+  before_script:
+    - apt -y update
+    - apt -y install make
+  script:
+    - make publish
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

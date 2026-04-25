@@ -1,0 +1,73 @@
+body {
+  --pico-font-family: system-ui, sans-serif;
+}
+main.container {
+  max-width: 900px;
+}
+header h1 {
+  margin-bottom: 0;
+}
+header p {
+  color: var(--pico-muted-color);
+}
+header {
+  margin-bottom: 2rem;
+}
+pre {
+  font-size: 0.9em;
+}
+h1, h2 {
+  text-align: center;
+}
+section {
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+}
+section:nth-of-type(even) {
+  background: color-mix(in srgb,
+    var(--pico-background-color),
+    var(--pico-primary) 4%
+  );
+}
+#support p {
+  text-align: center;
+}
+#support a[role="button"] {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+}
+article {
+  height: 100%;
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: var(--pico-background-color);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+article header {
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+article a[role="button"] {
+  width: 100%;
+  text-align: center;
+}
+article.recommended {
+  border: 1px solid var(--pico-primary);
+  background: color-mix(in srgb, var(--pico-primary), transparent 96%);
+}
+article.recommended:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+.grid {
+  margin-bottom: 1.5rem;
+}
+a[role="button"],
+button {
+  border-radius: 999px;
+}
