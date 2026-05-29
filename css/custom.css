@@ -36,6 +36,10 @@ section:nth-of-type(even) {
   margin-top: 0.5rem;
   padding: 0.75rem 1.5rem;
 }
+article.recommended {
+  border: 1px solid var(--pico-primary);
+  background: color-mix(in srgb, var(--pico-primary), transparent 96%);
+}
 article {
   height: 100%;
   border: 1px solid var(--pico-muted-border-color);
@@ -43,10 +47,11 @@ article {
   padding: 1.25rem;
   background: var(--pico-background-color);
   transition: transform 120ms ease, box-shadow 120ms ease;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);  
 }
 article:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(2px);
+  box-shadow: none;
 }
 article header {
   align-items: center;
@@ -56,13 +61,6 @@ article header {
 article a[role="button"] {
   width: 100%;
   text-align: center;
-}
-article.recommended {
-  border: 1px solid var(--pico-primary);
-  background: color-mix(in srgb, var(--pico-primary), transparent 96%);
-}
-article.recommended:hover {
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 .grid {
   margin-bottom: 1.5rem;
