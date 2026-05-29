@@ -29,6 +29,15 @@ section:nth-of-type(even) {
     var(--pico-primary) 4%
   );
 }
+header#top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-top:
+}
+
 #support p {
   text-align: center;
 }
@@ -47,7 +56,7 @@ article {
   padding: 1.25rem;
   background: var(--pico-background-color);
   transition: transform 120ms ease, box-shadow 120ms ease;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);  
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 article:hover {
   transform: translateY(2px);
