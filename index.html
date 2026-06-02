@@ -10,14 +10,15 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BengalOS">
     <meta property="og:title" content="BengalOS">
-    <meta name="twitter:description" content="OS Images of Phosh's nightly builds">
+    <meta name="twitter:description" content="OS Images of Phosh's Nightly Builds">
     <meta property="og:url" content="https://bengalos.phosh.mobi">
     <meta property="og:image" content="https://bengalos.phosh.mobi/assets/bengalos.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BengalOS">
-    <meta name="twitter:description" content="OS Images of Phosh's nightly builds">
+    <meta name="twitter:description" content="OS Images of Phosh's Nightly Builds">
     <meta name="twitter:image" content="https://bengalos.phosh.mobi/assets/bengalos.png">
 
     <link rel="icon" href="/assets/favicon.ico">
@@ -31,20 +32,20 @@
   </head>
   <body>
 
+    <nav class="container nav">
+      <a href="#download">Download</a>
+      <a href="#contact">Contact</a>
+      <a href="#support">Support</a>
+    </nav>
+
     <main class="container">
 
-      <header style="
-		     display: flex;
-		     flex-direction: column;
-		     align-items: center;
-		     text-align: center;
-		     gap: 0.5rem;
-		     ">
-	<img width="256" src="assets/bengalos.svg" alt="BengalOS logo">
+      <header id="top">
+	<img width="256" src="assets/bengalos.svg" alt="BengalOS logo" aria-hidden="false">
 	<div>
-	  <p style="margin: 0; color: var(--pico-muted-color);">
-	    OS Images of Phosh's nightly builds
-	  </p>
+	  <h1 style="margin: 0; color: var(--pico-muted-color);">
+	    OS Images of Phosh's Nightly Builds
+	  </h1>
 	</div>
       </header>
       <section id="overview">
@@ -63,8 +64,8 @@
       </section>
 
 
-      <section id="installing">
-	<h2>Installation</h2>
+      <section id="download">
+	<h2>Download</h2>
 
 	<div class="grid">
 
@@ -101,6 +102,8 @@
 		Download qcow2 Image
               </a>
 	    </p>
+
+	    <a href="#install" class="hint-link">How do I use this?</a>
 	  </article>
 
 
@@ -138,15 +141,52 @@
               </a>
 	    </p>
 	  </article>
-
 	</div>
+      </section>
 
+      <section id="install">
+	<h2>Installation</h2>
+	<p>
+	  To boot the immutable image in a virtual machine, download
+	  and uncompress it and then boot it e.g. using <i>virt-install</i>.
+	</p>
+
+	<details>
+	  <summary>Detailed installation steps <small>(click to expand)</small></summary>
+	  <ol>
+	    <li>Install virt-install, libvirt and QEMU:
+	  <pre><code>
+sudo apt install virt-install libvirt-daemon-system qemu-system-x86
+	  </pre></code>
+	    </li>
+	    <li>
+	      Download the image:
+	  <pre><code>
+wget https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/latest.qcow2.xz
+	  </pre></code>
+	    </li>
+	    <li>
+	      Unpack the image:
+	  <pre><code>
+unxz latest.qcow2.xz
+          </pre></code>
+	    </li>
+	    <li>
+	      Create and boot the virtual machine:
+	  <pre><code>
+virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure-boot,firmware.feature0.enabled=yes,firmware.feature1.name=enrolled-keys,firmware.feature1.enabled=no --vcpus 4 --memory 4096 --osinfo debiantesting -n bengalos-keep --video qxl --import --disk latest.qcow2  --serial pty
+	  </pre></code>
+	    </li>
+	    <li>
+	      The virtual machine should boot with secure boot enabled and greet you with the first-boot assistant.
+	    </li>
+	    </ol>
+	</details>
 	<p>
 	  See the
 	  <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes/-/blob/main/README.md">
-	    project README
-	  </a>
-	  for installation instructions on how to build your own images.
+	    README
+	  </a> for more details and how to build images yourself.
 	</p>
       </section>
 
@@ -170,7 +210,7 @@
 
       <section id="coc">
 	<h2>Code of Conduct</h2>
-	<p>	
+	<p>
 	  BengalOS follows Phosh's
 	  <a href="https://ev.phosh.mobi/resources/code-of-conduct/">Code
 	    of Conduct</a>. Please follow a respectful and civilized
