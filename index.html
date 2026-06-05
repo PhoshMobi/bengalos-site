@@ -174,7 +174,7 @@ unxz latest.qcow2.xz
 	    <li>
 	      Create and boot the virtual machine:
 	  <pre><code>
-virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure-boot,firmware.feature0.enabled=yes,firmware.feature1.name=enrolled-keys,firmware.feature1.enabled=no --vcpus 4 --memory 4096 --osinfo debiantesting -n bengalos-keep --video qxl --import --disk latest.qcow2  --serial pty
+virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure-boot,firmware.feature0.enabled=yes,firmware.feature1.name=enrolled-keys,firmware.feature1.enabled=no --vcpus 4 --memory 4096 --osinfo debiantesting -n bengalos --video qxl --import --disk latest.qcow2  --serial pty
 	  </pre></code>
 	    </li>
 	    <li>
