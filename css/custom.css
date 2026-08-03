@@ -197,6 +197,46 @@ article details.dropdown summary {
   text-align: center;
 }
 
+details.dropdown > summary + ul {
+
+}
+
+details.dropdown > summary + ul {
+  border-radius: 12px;
+  padding: 0.5rem;
+
+  background: var(--pico-background-color);
+  border: 1px solid var(--pico-muted-border-color);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+details.dropdown > summary + ul li {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+details.dropdown > summary + ul li a {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+}
+
+details.dropdown > summary + ul li a:hover,
+details.dropdown > summary + ul li a:focus {
+  background: color-mix(
+    in srgb,
+    var(--pico-primary),
+    transparent 90%
+  );
+}
+
+details.dropdown > summary + ul {
+  min-width: 16rem;
+}
+
 /*
  *  Install instructions
  */
