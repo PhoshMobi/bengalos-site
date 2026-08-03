@@ -157,13 +157,18 @@
 
       <section id="install">
 	<h2>Installation</h2>
-	<p>
-	  To boot the immutable image in a virtual machine, download
-	  and uncompress it and then boot it e.g. using <i>virt-install</i>.
-	</p>
 
-	<details>
-	  <summary>Detailed installation steps <small>(click to expand)</small></summary>
+        <p>
+          Immutable images can be used on different targets. Choose the
+          installation instructions matching the image you downloaded.
+        </p>
+
+        <details class="install-instructions">
+          <summary>
+            Virtual Machine (amd64 qcow2)
+            <small class="expand-hint"></small>
+          </summary>
+
 	  <ol>
 	    <li>Install virt-install, libvirt and QEMU:
 	  <pre><code>
@@ -193,6 +198,22 @@ virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure
 	    </li>
 	    </ol>
 	</details>
+
+        <details class="install-instructions">
+          <summary>
+            Google Pixel 3a (sdm670)
+            <small class="expand-hint"></small>
+          </summary>
+
+          <p>
+            The Google Pixel 3a image requires device-specific installation steps.
+            Please see the
+            <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes/-/blob/main/docs/devices/sdm670.md">
+              Pixel 3a installation instructions
+            </a>.
+          </p>
+        </details>
+
 	<p>
 	  See the
 	  <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes/-/blob/main/README.md">

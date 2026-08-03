@@ -265,6 +265,15 @@ details.install-instructions summary small {
   font-weight: normal;
   margin-left: 0.5rem;
 }
+
+details.install-instructions summary .expand-hint::before {
+  content: "(click to expand)";
+}
+
+details.install-instructions[open] summary .expand-hint::before {
+  content: "(click to collapse)";
+}
+
 .hint-link {
   display: inline;
   margin-top: 0;
