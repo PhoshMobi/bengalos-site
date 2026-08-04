@@ -113,6 +113,134 @@ a[role="button"],
 button {
   border-radius: 999px;
 }
+
+details.dropdown summary[role="button"] {
+  border-radius: 999px;
+}
+
+.download-button {
+  display: flex;
+  width: 100%;
+}
+
+.download-button > a[role="button"] {
+  flex: 1;
+  border-radius: 999px 0 0 999px;
+  margin: 0;
+}
+
+.download-button details {
+  position: relative;
+  margin: 0;
+}
+
+.download-button summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  min-width: 3.2rem;
+
+  padding: 0.75rem 1rem;
+  margin: 0;
+
+  border-radius: 0 999px 999px 0;
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+
+  cursor: pointer;
+  list-style: none;
+}
+
+.download-button summary::after {
+  display: none;
+}
+
+.download-button summary::-webkit-details-marker {
+  display: none;
+}
+
+.download-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + .5rem);
+  z-index: 20;
+
+  min-width: 18rem;
+  padding: .5rem;
+
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: 12px;
+
+  background: var(--pico-background-color);
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+}
+
+.download-menu a {
+  display: block;
+  padding: .5rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/*
+ * Image selection dropdown
+ */
+
+article details.dropdown {
+  width: 100%;
+}
+
+article details.dropdown summary {
+  width: 100%;
+  text-align: center;
+}
+
+details.dropdown > summary + ul {
+
+}
+
+details.dropdown > summary + ul {
+  border-radius: 12px;
+  padding: 0.5rem;
+
+  background: var(--pico-background-color);
+  border: 1px solid var(--pico-muted-border-color);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+details.dropdown > summary + ul li {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+details.dropdown > summary + ul li a {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+}
+
+details.dropdown > summary + ul li a:hover,
+details.dropdown > summary + ul li a:focus {
+  background: color-mix(
+    in srgb,
+    var(--pico-primary),
+    transparent 90%
+  );
+}
+
+details.dropdown > summary + ul {
+  min-width: 16rem;
+}
+
+/*
+ *  Install instructions
+ */
+
 details.install-instructions {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
@@ -137,6 +265,15 @@ details.install-instructions summary small {
   font-weight: normal;
   margin-left: 0.5rem;
 }
+
+details.install-instructions summary .expand-hint::before {
+  content: "(click to expand)";
+}
+
+details.install-instructions[open] summary .expand-hint::before {
+  content: "(click to collapse)";
+}
+
 .hint-link {
   display: inline;
   margin-top: 0;

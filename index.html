@@ -41,216 +41,248 @@
     <main class="container">
 
       <header id="top">
-	<img width="256" src="assets/bengalos.svg" alt="BengalOS logo" aria-hidden="false">
-	<div>
-	  <h1 style="margin: 0; color: var(--pico-muted-color);">
-	    OS Images of Phosh's Nightly Builds
-	  </h1>
-	</div>
+        <img width="256" src="assets/bengalos.svg" alt="BengalOS logo" aria-hidden="false">
+        <div>
+          <h1 style="margin: 0; color: var(--pico-muted-color);">
+            OS Images of Phosh's Nightly Builds
+          </h1>
+        </div>
       </header>
       <section id="overview">
-	<h2>Overview</h2>
-	<p>
-	  BengalOS provides immutable and mutable images
-	  for <a href="https://phosh.mobi">Phosh</a>'s nightly package
-	  builds. The immutable variants support A/B updates and are
-	  thus safe to upgrade and give a more phone-like upgrade
-	  experience.
-	</p>
-	<p>
-	  All of BengalOS is currently <b>experimental</b>, we might make incompatible
-	  changes at any time.
-	</p>
+        <h2>Overview</h2>
+        <p>
+          BengalOS provides immutable and mutable images
+          for <a href="https://phosh.mobi">Phosh</a>'s nightly package
+          builds. The immutable variants support A/B updates and are
+          thus safe to upgrade and give a more phone-like upgrade
+          experience.
+        </p>
+        <p>
+          All of BengalOS is currently <b>experimental</b>, we might make incompatible
+          changes at any time.
+        </p>
       </section>
 
 
       <section id="download">
-	<h2>Download</h2>
+        <h2>Download</h2>
 
-	<div class="grid">
+        <div class="grid">
 
-	  <!-- Immutable -->
-	  <article class="recommended">
-	    <header style="display:flex; align-items:center; gap:1rem;">
+          <!-- Immutable -->
+          <article class="recommended">
+            <header style="display:flex; align-items:center; gap:1rem;">
               <svg xmlns="http://www.w3.org/2000/svg"
-		   width="42" height="42"
-		   viewBox="0 0 24 24"
-		   fill="none"
-		   stroke="currentColor"
-		   stroke-width="2"
-		   stroke-linecap="round"
-		   stroke-linejoin="round"
-		   style="color:#2e7d32;">
-		<rect x="3" y="11" width="18" height="11" rx="2"/>
-		<path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                   width="42" height="42"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   style="color:#2e7d32;">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
               </svg>
 
               <div>
-		<strong>Immutable Images</strong><br>
-		<small>A/B updates · safer upgrades</small>
+                <strong>Immutable Images</strong><br>
+                <small>A/B updates · safer upgrades</small>
               </div>
-	    </header>
+            </header>
 
-	    <p>
+            <p>
               Immutable BengalOS images provide atomic A/B updates and
               are designed for a phone-like upgrade experience.
-	    </p>
+            </p>
 
-	    <p>
-              <a role="button"
-		 href="https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/latest.qcow2.xz">
-		Download qcow2 Image
-              </a>
-	    </p>
+            <p>
+              <details class="dropdown">
+                <summary role="button">Download Image</summary>
+                <ul>
+                  <li>
+                    <a href="https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/latest.qcow2.xz">
+                      Virtual Machine (amd64 qcow2)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm670/latest.raw.xz">
+                      Google Pixel 3a (sdm670)
+                    </a>
+                  </li>
+                </ul>
+              </details>
+            </p>
 
-	    <a href="#install" class="hint-link">How do I use this?</a>
-	  </article>
+            <a href="#install" class="hint-link">How do I use this?</a>
+          </article>
 
 
-	  <!-- Mutable -->
-	  <article>
-	    <header style="display:flex; align-items:center; gap:1rem;">
+          <!-- Mutable -->
+          <article>
+            <header style="display:flex; align-items:center; gap:1rem;">
               <svg xmlns="http://www.w3.org/2000/svg"
-		   width="42" height="42"
-		   viewBox="0 0 24 24"
-		   fill="none"
-		   stroke="currentColor"
-		   stroke-width="2"
-		   stroke-linecap="round"
-		   stroke-linejoin="round"
-		   style="color:#ef6c00;">
-		<path d="M12 20h9"/>
-		<path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+                   width="42" height="42"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   style="color:#ef6c00;">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>
               </svg>
 
               <div>
-		<strong>Mutable Images</strong><br>
-		<small>Traditional writable system</small>
+                <strong>Mutable Images</strong><br>
+                <small>Traditional writable system</small>
               </div>
-	    </header>
+            </header>
 
-	    <p>
+            <p>
               Mutable images behave like a traditional Linux system and
               are easier to customize and modify locally.
-	    </p>
+            </p>
 
-	    <p>
+            <p>
               <a role="button" class="secondary"
-		 href="https://images.phosh.mobi/nightly/amd64/">
-		Browse Mutable Images
+                 href="https://images.phosh.mobi/nightly/amd64/">
+                Browse Mutable Images
               </a>
-	    </p>
-	  </article>
-	</div>
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="install">
-	<h2>Installation</h2>
-	<p>
-	  To boot the immutable image in a virtual machine, download
-	  and uncompress it and then boot it e.g. using <i>virt-install</i>.
-	</p>
+        <h2>Installation</h2>
 
-	<details>
-	  <summary>Detailed installation steps <small>(click to expand)</small></summary>
-	  <ol>
-	    <li>Install virt-install, libvirt and QEMU:
-	  <pre><code>
+        <p>
+          Immutable images can be used on different targets. Choose the
+          installation instructions matching the image you downloaded.
+        </p>
+
+        <details class="install-instructions">
+          <summary>
+            Virtual Machine (amd64 qcow2)
+            <small class="expand-hint"></small>
+          </summary>
+
+          <ol>
+            <li>Install virt-install, libvirt and QEMU:
+          <pre><code>
 sudo apt install virt-install libvirt-daemon-system qemu-system-x86
-	  </pre></code>
-	    </li>
-	    <li>
-	      Download the image:
-	  <pre><code>
+          </pre></code>
+            </li>
+            <li>
+              Download the image:
+          <pre><code>
 wget https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/latest.qcow2.xz
-	  </pre></code>
-	    </li>
-	    <li>
-	      Unpack the image:
-	  <pre><code>
+          </pre></code>
+            </li>
+            <li>
+              Unpack the image:
+          <pre><code>
 unxz latest.qcow2.xz
           </pre></code>
-	    </li>
-	    <li>
-	      Create and boot the virtual machine:
-	  <pre><code>
+            </li>
+            <li>
+              Create and boot the virtual machine:
+          <pre><code>
 virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure-boot,firmware.feature0.enabled=yes,firmware.feature1.name=enrolled-keys,firmware.feature1.enabled=no --vcpus 4 --memory 4096 --osinfo debiantesting -n bengalos --video qxl --import --disk latest.qcow2  --serial pty
-	  </pre></code>
-	    </li>
-	    <li>
-	      The virtual machine should boot with secure boot enabled and greet you with the first-boot assistant.
-	    </li>
-	    </ol>
-	</details>
-	<p>
-	  See the
-	  <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes/-/blob/main/README.md">
-	    README
-	  </a> for more details and how to build images yourself.
-	</p>
+          </pre></code>
+            </li>
+            <li>
+              The virtual machine should boot with secure boot enabled and greet you with the first-boot assistant.
+            </li>
+            </ol>
+        </details>
+
+        <details class="install-instructions">
+          <summary>
+            Google Pixel 3a (sdm670)
+            <small class="expand-hint"></small>
+          </summary>
+
+          <p>
+            The Google Pixel 3a image requires device-specific installation steps.
+            Please see the
+            <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes/-/blob/main/docs/devices/sdm670.md">
+              Pixel 3a installation instructions
+            </a>.
+          </p>
+        </details>
+
+        <p>
+          See the
+          <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes/-/blob/main/README.md">
+            README
+          </a> for more details and how to build images yourself.
+        </p>
       </section>
 
       <section id="contact">
-	<h2>Getting in Touch</h2>
-	<p>
-	  The community is centered around the <a href="https://matrix.to/#/#bengalos:phosh.mobi">BengalOS Matrix room</a>.
-	  For issues and feature requests, please use the <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes">issue tracker</a>.
-	</p>
+        <h2>Getting in Touch</h2>
+        <p>
+          The community is centered around the <a href="https://matrix.to/#/#BengalOS:phosh.mobi">BengalOS Matrix room</a>.
+          For issues and feature requests, please use the <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes">issue tracker</a>.
+        </p>
       </section>
 
       <section id="links">
-	<h2>Resources</h2>
-	<ul>
-	  <li><a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes">Mkosi recipes to build the images</a></li>
-	  <li><a href="https://salsa.debian.org/BengalOS-team/bengalos-pkgs">Gitlab CI jobs to build the nightly packages</a></li>
-	  <li><a href="https://salsa.debian.org/BengalOS-team/bengalos-plan/-/work_items">Things we would like to add</a></li>
-	  <li><a href="https://phosh.mobi/">The Phosh project</a></li>
-	</ul>
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes">Mkosi recipes to build the images</a></li>
+          <li><a href="https://salsa.debian.org/BengalOS-team/bengalos-pkgs">Gitlab CI jobs to build the nightly packages</a></li>
+          <li><a href="https://salsa.debian.org/BengalOS-team/bengalos-plan/-/work_items">Things we would like to add</a></li>
+          <li><a href="https://phosh.mobi/">The Phosh project</a></li>
+        </ul>
       </section>
 
       <section id="coc">
-	<h2>Code of Conduct</h2>
-	<p>
-	  BengalOS follows Phosh's
-	  <a href="https://ev.phosh.mobi/resources/code-of-conduct/">Code
-	    of Conduct</a>. Please follow a respectful and civilized
-	    communication style when interacting with community
-	    members on Matrix and bug trackers.
-	</p>
+        <h2>Code of Conduct</h2>
+        <p>
+          BengalOS follows Phosh's
+          <a href="https://ev.phosh.mobi/resources/code-of-conduct/">Code
+            of Conduct</a>. Please follow a respectful and civilized
+            communication style when interacting with community
+            members on Matrix and bug trackers.
+        </p>
       </section>
 
       <section id="support">
-	<h2>Support our Work</h2>
+        <h2>Support our Work</h2>
 
-	<p>
-	  You can support our work with a one-time or recurring donation.
-	</p>
+        <p>
+          You can support our work with a one-time or recurring donation.
+        </p>
 
-	<p>
-	  <a role="button"
-	     href="https://ev.phosh.mobi/donate/">
-	    ❤️ Donate
-	  </a>
-	</p>
+        <p>
+          <a role="button"
+             href="https://ev.phosh.mobi/donate/">
+            ❤️ Donate
+          </a>
+        </p>
 
-	<p>
-	  If you want to support us continuously, you can become a
-	  <a href="https://ev.phosh.mobi/about/joining#becoming-a-supporting-member">
-	    supporting member
-	  </a>. You can also support us via
-	  <a href="https://github.com/sponsors/PhoshMobi">
-	    GitHub Sponsors
-	  </a> or
-	  <a href="https://liberapay.com/PhoshMobi">
-	    Liberapay
-	  </a>.
-	</p>
+        <p>
+          If you want to support us continuously, you can become a
+          <a href="https://ev.phosh.mobi/about/joining#becoming-a-supporting-member">
+            supporting member
+          </a>. You can also support us via
+          <a href="https://github.com/sponsors/PhoshMobi">
+            GitHub Sponsors
+          </a> or
+          <a href="https://liberapay.com/PhoshMobi">
+            Liberapay
+          </a>.
+        </p>
       </section>
 
       <footer>
-	<small>
-	  BengalOS is entirely Free Software.
-	</small>
+        <small>
+          BengalOS is entirely Free Software.
+        </small>
       </footer>
 
     </main>
