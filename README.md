@@ -6,7 +6,7 @@ This is the repository for the BengalOS website at
 Run
 
 ```sh
-make publish
+make build
 ```
 
 to assemble all files in `publish/` so it can be synced to the webserver.
