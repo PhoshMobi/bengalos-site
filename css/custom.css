@@ -290,3 +290,9 @@ details.install-instructions[open] summary .expand-hint::before {
   color: var(--pico-primary);
   text-decoration: underline;
 }
+
+#hetzner-logo {
+  margin-left: 4px;
+  vertical-align: top;
+  height: 40px;
+}
