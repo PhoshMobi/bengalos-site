@@ -118,6 +118,24 @@ details.dropdown summary[role="button"] {
   border-radius: 999px;
 }
 
+.dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.dropdown li > a:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.dropdown li > a.browse {
+  flex-shrink: 0;
+  margin-left: auto;
+  font-size: 0.75em;
+  white-space: nowrap;
+}
+
 .download-button {
   display: flex;
   width: 100%;

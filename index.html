@@ -51,15 +51,22 @@
       <section id="overview">
         <h2>Overview</h2>
         <p>
-          BengalOS provides immutable and mutable images
+          BengalOS provides immutable OS images
           for <a href="https://phosh.mobi">Phosh</a>'s nightly package
-          builds. The immutable variants support A/B updates and are
-          thus safe to upgrade and give a more phone-like upgrade
-          experience.
+          builds. They support A/B updates and are thus safe to
+          upgrade. If something goes wrong you can fall back to the
+          old version.
         </p>
         <p>
-          All of BengalOS is currently <b>experimental</b>, we might make incompatible
-          changes at any time. For other options to run Phosh see
+          BengalOS is currently in <b>beta</b> stage. While we try to
+          avoid incompatible changes that require a reinstall, they
+          still might happen. If you intend to use BengalOS, please
+          also join our <a href="#contact">Matrix channel</a> to get
+          up to date information and provide feedback on issues you
+          encounter.
+        </p>
+        <p>
+          For other options to install and run Phosh on your device see
           <a href="https://phosh.mobi/faq/#installation-and-device-support">here</a>.
         </p>
       </section>
@@ -87,39 +94,58 @@
               </svg>
 
               <div>
-                <strong>Immutable Images</strong><br>
-                <small>A/B updates · safer upgrades</small>
+                <strong>OS Images</strong><br>
+                <small>Download the latest BengalOS image for your device</small>
               </div>
             </header>
 
             <p>
-              Immutable BengalOS images provide atomic A/B updates and
-              are designed for a phone-like upgrade experience.
+              BengalOS is currently in <b>beta</b> stage. Please inform us about issues you encounter.
             </p>
 
             <p>
-              <details class="dropdown">
+              <details class="dropdown" style="max-width: 25em; margin-inline: auto;">
                 <summary role="button">Download Image</summary>
                 <ul>
                   <li>
                     <a href="https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/latest.qcow2.xz">
                       Virtual Machine (amd64 qcow2)
                     </a>
+		    <a class="browse" href="https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/">
+		      browse
+		    </a>
                   </li>
                   <li>
                     <a href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm670/latest.img.xz">
                       Google Pixel 3a (sdm670)
                     </a>
+		    <a class="browse" href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm670/">
+		      browse
+		    </a>
                   </li>
                   <li>
                     <a href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm845/latest.img.xz">
                       Google Pixel 3 (sdm845)
                     </a>
+		    <a class="browse" href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm845/">
+		      browse
+		    </a>
+                  </li>
+                  <li>
+                    <a href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm845/latest.img.xz">
+                      OnePlus 6 (sdm845)
+                    </a>
+		    <a class="browse" href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm845/">
+		      browse
+		    </a>
                   </li>
                   <li>
                     <a href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm845/latest.img.xz">
                       SHIFT6mq (sdm845)
                     </a>
+		    <a class="browse" href="https://bengalos.phosh.mobi/images/roaming/arm64/sdm845/">
+		      browse
+		    </a>
                   </li>
                 </ul>
               </details>
@@ -127,47 +153,11 @@
 
             <a href="#install" class="hint-link">How do I use this?</a>
           </article>
-
-
-          <!-- Mutable -->
-          <article>
-            <header style="display:flex; align-items:center; gap:1rem;">
-              <svg xmlns="http://www.w3.org/2000/svg"
-                   width="42" height="42"
-                   viewBox="0 0 24 24"
-                   fill="none"
-                   stroke="currentColor"
-                   stroke-width="2"
-                   stroke-linecap="round"
-                   stroke-linejoin="round"
-                   style="color:#ef6c00;">
-                <path d="M12 20h9"/>
-                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>
-              </svg>
-
-              <div>
-                <strong>Mutable Images</strong><br>
-                <small>Traditional writable system</small>
-              </div>
-            </header>
-
-            <p>
-              Mutable images behave like a traditional Linux system and
-              are easier to customize and modify locally.
-            </p>
-
-            <p>
-              <a role="button" class="secondary"
-                 href="https://images.phosh.mobi/nightly/amd64/">
-                Browse Mutable Images
-              </a>
-            </p>
-          </article>
         </div>
 
-	<div>
-	  Infrastructure sponsored by <a alt="hetzner.com" href="https://www.hetzner.com"><img id="hetzner-logo" src="assets/hetzner-logo.svg"/></a>
-	</div>
+        <div>
+          Infrastructure sponsored by <a alt="hetzner.com" href="https://www.hetzner.com"><img id="hetzner-logo" src="assets/hetzner-logo.svg"/></a>
+        </div>
       </section>
 
       <section id="install">
@@ -272,12 +262,12 @@ virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure
         <p>
           The community is centered around the <a href="https://matrix.to/#/#BengalOS:phosh.mobi">BengalOS Matrix room</a>.
           For issues and feature requests, please use the <a href="https://salsa.debian.org/BengalOS-team/bengalos-recipes">issue tracker</a>.
-	</p>
+        </p>
 
-	<p>
+        <p>
           BengalOS follows Phosh's <a href="https://ev.phosh.mobi/resources/code-of-conduct/">Code
           of Conduct</a>. Please follow a respectful and civilized communication style when
-	  interacting with community members on Matrix and bug trackers.
+          interacting with community members on Matrix and bug trackers.
         </p>
       </section>
 
