@@ -170,42 +170,6 @@
 
         <details class="install-instructions">
           <summary>
-            Virtual Machine (amd64 qcow2)
-            <small class="expand-hint"></small>
-          </summary>
-
-          <ol>
-            <li>Install virt-install, libvirt and QEMU:
-          <pre><code>
-sudo apt install virt-install libvirt-daemon-system qemu-system-x86
-          </pre></code>
-            </li>
-            <li>
-              Download the image:
-          <pre><code>
-wget https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/latest.qcow2.xz
-          </pre></code>
-            </li>
-            <li>
-              Unpack the image:
-          <pre><code>
-unxz latest.qcow2.xz
-          </pre></code>
-            </li>
-            <li>
-              Create and boot the virtual machine:
-          <pre><code>
-virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure-boot,firmware.feature0.enabled=yes,firmware.feature1.name=enrolled-keys,firmware.feature1.enabled=no --vcpus 4 --memory 4096 --osinfo debiantesting -n bengalos --video qxl --import --disk latest.qcow2  --serial pty
-          </pre></code>
-            </li>
-            <li>
-              The virtual machine should boot with secure boot enabled and greet you with the first-boot assistant.
-            </li>
-            </ol>
-        </details>
-
-        <details class="install-instructions">
-          <summary>
             Google Pixel 3a (sdm670)
             <small class="expand-hint"></small>
           </summary>
@@ -262,6 +226,42 @@ virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure
               SHIFT6mq installation instructions
             </a>.
           </p>
+        </details>
+
+        <details class="install-instructions">
+          <summary>
+            Virtual Machine (amd64 qcow2)
+            <small class="expand-hint"></small>
+          </summary>
+
+          <ol>
+            <li>Install virt-install, libvirt and QEMU:
+          <pre><code>
+sudo apt install virt-install libvirt-daemon-system qemu-system-x86
+          </pre></code>
+            </li>
+            <li>
+              Download the image:
+          <pre><code>
+wget https://bengalos.phosh.mobi/images/roaming/x86-64/qemu/latest.qcow2.xz
+          </pre></code>
+            </li>
+            <li>
+              Unpack the image:
+          <pre><code>
+unxz latest.qcow2.xz
+          </pre></code>
+            </li>
+            <li>
+              Create and boot the virtual machine:
+          <pre><code>
+virt-install --connect qemu:///session --boot uefi,firmware.feature0.name=secure-boot,firmware.feature0.enabled=yes,firmware.feature1.name=enrolled-keys,firmware.feature1.enabled=no --vcpus 4 --memory 4096 --osinfo debiantesting -n bengalos --video qxl --import --disk latest.qcow2  --serial pty
+          </pre></code>
+            </li>
+            <li>
+              The virtual machine should boot with secure boot enabled and greet you with the first-boot assistant.
+            </li>
+            </ol>
         </details>
 
         <p>
